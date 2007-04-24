@@ -1,6 +1,6 @@
 %define name libmaitretarot
 %define version 0.1.98
-%define release %mkrel 7
+%define release %mkrel 8
 %define major 0
 %define libname %mklibname maitretarot %major
 
