@@ -43,6 +43,7 @@ Summary: Development files from Libmaitretarot
 Group: System/Libraries
 Requires: %libname = %version-%release
 Provides: %name-devel = %version-%release
+Obsoletes: %{_lib}%{name}0-devel
 
 %description -n %libnamedevel
 This package is need to build application wich use Libmaitretarot.
