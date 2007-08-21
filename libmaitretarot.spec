@@ -1,8 +1,9 @@
 %define name libmaitretarot
 %define version 0.1.98
-%define release %mkrel 8
+%define release %mkrel 9
 %define major 0
 %define libname %mklibname maitretarot %major
+%define libnamedevel %mklibname -d maitretarot
 
 Summary: The Maitretarot library
 Name: %{name}
@@ -37,16 +38,16 @@ for both the server and any client.
 Maitretarot est le serveur pour un jeu de tarot. Libmaitretarot
 est une biblothèque pour à la fois le serveur et n'importe quel client.
 
-%package -n %libname-devel
+%package -n %libnamedevel
 Summary: Development files from Libmaitretarot
 Group: System/Libraries
 Requires: %libname = %version-%release
 Provides: %name-devel = %version-%release
 
-%description -n %libname-devel
+%description -n %libnamedevel
 This package is need to build application wich use Libmaitretarot.
 
-%description -n %libname-devel -l fr
+%description -n %libnamedevel -l fr
 Ce package est utilisé pour compiler les applications qui utilise 
 Libmaitretarot.
 
@@ -73,12 +74,10 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS COPYING ChangeLog 
 %{_libdir}/*.so.*
 
-%files -n %libname-devel
+%files -n %libnamedevel
 %defattr(-,root,root)
 %{_libdir}/*.so
 %{_libdir}/*.a
 %{_libdir}/*.la
 %{_includedir}/maitretarot.h
-
-
 
