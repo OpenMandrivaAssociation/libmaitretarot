@@ -13,7 +13,6 @@ License: GPL
 Group: Games/Cards
 Source: http://www.nongnu.org/download/maitretarot/devel.pkg/%{version}/%{name}-%{version}.tar.bz2
 URL: http://www.nongnu.org/maitretarot/
-BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildRequires: glib2-devel
 BuildRequires: libxml2-devel
 
